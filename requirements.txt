@@ -1,0 +1,6 @@
+flask
+cryptography
+tkinter
+requests
+scikit-learn
+joblib

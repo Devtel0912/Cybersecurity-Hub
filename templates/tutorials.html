@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials</title>
+    <link rel="stylesheet" href="/static/css/tutorials.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="title-container">
+        <h1>Tutorials</h1>
+    </div>
+    <nav class="navbar"> 
+    <a href="#" class="toggle-button" id="toggle-button">
+        &#9776
+    </a>
+    <ul class="nav-links" id="nav-links"> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="phising.html">Phising</a></li>
+        <li><a href="tutorials.html">Tutotrials</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="accordian">
+    <button class="accordion-title">Beginner</button>
+    <div class="accordion-content">
+        <ul>
+            <ul><a href="#">Cybersecurity</a></ul>
+            <ul><a href="#">Virtual Machines</a></ul>
+            <ul><a href="#">Networking Protocols</a></ul>
+            <ul><a href="#">Passwords</a></ul>  
+            <ul><a href="#">Firewalls</a></ul>
+        </ul>
+    </div>
+
+
+
+    <button class="accordion-title">Intermediate </button>
+    <div class="accordion-content">
+        <ul>
+            <ul><a href="#">Network Scanning</a></ul>
+            <ul><a href="#">Wireshark</a></ul>
+            <ul><a href="#">Event Monitoring and Log Analysis</a></ul>
+            <ul><a href="#">Malware Analysis</a></ul>
+        </ul>
+    </div>
+    
+
+    <button class="accordion-title">Advanced</button>
+    <div class="accordion-content">
+        <ul>
+           <ul><a href="#">Exploit Development in a Safe Lab</a></ul>
+           <ul><a href="#">Advanced Malware Analysis</a></ul>
+           <ul><a href="#">Incident Response</a></ul>
+           <ul><a href="#">Forensics</a></ul>
+           <ul><a href="#">SIEM Log Correlation & Alerting</a></ul>
+           <ul><a href="#">Penetration Testing</a></ul>
+        </ul>
+    </div>
+</div>
+<script>
+const toggleButton = document.getElementById('toggle-button');
+const navLinks = document.getElementById('nav-links');
+toggleButton.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});   
+
+
+
+const accordionTitles = document.querySelectorAll('.accordion-title');
+
+accordionTitles.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+
+   
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      
+      document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>

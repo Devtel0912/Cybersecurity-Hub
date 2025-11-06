@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Program</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="title-container">
+        <h1>Cybersecurity Program</h1>
+    </div>
+    <nav class="navbar"> 
+    <a href="#" class="toggle-button" id="toggle-button">
+        &#9776
+    </a>
+    <ul class="nav-links" id="nav-links"> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="phising.html">Phishing</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!----ICON-->
+<div class="icon"></div>	
+<!---------->
+ <!-- JavaScript -->
+   <script>
+    const toggleButton = document.getElementById('toggle-button');
+const navLinks = document.getElementById('nav-links');
+
+toggleButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
+
+
+
+
+    
+</body>
+</html>
